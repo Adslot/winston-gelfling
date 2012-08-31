@@ -2,7 +2,7 @@
   "author": "Adslot (http://adslot.com)",
   "name": "winston-gelfling",
   "description": "Winston transport using Gelfling",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/adslot/winston-gelfling",
   "repository": {
     "url": "https://github.com/adslot/winston-gelfling.git"

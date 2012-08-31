@@ -40,7 +40,5 @@ exports.Gelfling = winston.transports.Gelfling = class Gelfling extends winston.
       short_message: msg
       full_message: meta || {}
       level: @getMessageLevel(level)
-    if (!!meta)
-      message['_'+key] = meta[key] for key in meta when key isnt 'id'
     @gelfling.send message
     callback null, true

@@ -42,7 +42,7 @@
     };
 
     Gelfling.prototype.log = function(level, msg, meta, callback) {
-      var key, message, _i, _len;
+      var message;
       if (this.silent) return callback(null, true);
       message = {
         version: "1.0",
@@ -53,12 +53,6 @@
         full_message: meta || {},
         level: this.getMessageLevel(level)
       };
-      if (!!meta) {
-        for (_i = 0, _len = meta.length; _i < _len; _i++) {
-          key = meta[_i];
-          if (key !== 'id') message['_' + key] = meta[key];
-        }
-      }
       this.gelfling.send(message);
       return callback(null, true);
     };
